@@ -2,6 +2,9 @@ $(document).ready(function(){
   databaseOpen(function(){
     input = document.querySelector('input');
     document.body.addEventListener('submit', onSubmit);
+    databaseTodosGet(function(todos){
+      console.log(todos)
+    });
   });
 
   function onSubmit(e){
@@ -13,9 +16,26 @@ $(document).ready(function(){
 
 });
 
-
-
 var db, input;
+
+function databaseTodosGet(callback){
+  var transaction = db.transaction(['todo'],'readwrite');
+  var store = transaction.objectStore('todo');
+  var keyRange = IDBKeyRange.lowerBound(0);
+  var cursorRequest = store.openCursor(keyRange);
+  var data = [];
+
+  cursorRequest.onsuccess = function(e){
+    var result = e.target.result;
+    if(result){
+      data.push(result.value);
+      result.continue();
+    } else {
+      callback(data);
+    }
+  };
+}
+
 
 function databaseTodosAdd(text, callback){
   var transaction = db.transaction(['todo'], 'readwrite');
