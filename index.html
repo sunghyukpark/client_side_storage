@@ -51,13 +51,13 @@
         <h2 id="articleTitle">Let us help you</h2>
         <form class="formHP">
           Where are you moving to?<br>
-          <select>
+          <select id='select-city'>
             <option value="NYC">NYC</option>
             <option value="SF">SF</option>
           </select><br><br>
 
           When are you moving?<br>
-          <select>
+          <select id='select-period'>
             <option value="next month">Next Month</option>
             <option value="in 3 months">In 3 Months</option>
             <option value="in 3 months">In 6 Months</option>
@@ -66,11 +66,11 @@
 
           Please check all that apply<br>
           <div id="checkbox">
-            <input type="checkbox" name="necessities" value="Roommate">   Roommate<br>
-            <input type="checkbox" name="necessities" value="A place to live">   A place to live<br>
-            <input type="checkbox" name="necessities" value="Neighborhood Guide">   Neighborhood Guide<br>
+            <input type="checkbox" name="necessities" value="Roommate" id='roommate'>   Roommate<br>
+            <input type="checkbox" name="necessities" value="A place to live" id='place-to-live'>   A place to live<br>
+            <input type="checkbox" name="necessities" value="Neighborhood Guide" id='neighborhood'>   Neighborhood Guide<br>
           </div>
-
+          <input type='submit' value='Submit'>
         </form>
         </div>
       </div>
