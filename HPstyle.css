@@ -1,0 +1,84 @@
+/*fonts*/
+
+@font-face {
+    font-family: bebasBold;
+    src: url(BebasNeue_Bold.otf);
+}
+
+@font-face {
+    font-family: moonBold;
+    src: url(Moon_Bold.otf);
+}
+
+@font-face {
+    font-family: openSansLight;
+    src: url(OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: openSansReg;
+    src: url(OpenSans-Regular.ttf);
+}
+
+/*bootstrap*/
+.jumbotron {
+  background: black;
+}
+
+/*other*/
+#headTitle {
+  color: white;
+  font-size: 140px;
+  text-align: center;
+  font-family: bebasBold;
+}
+
+#articleTitle {
+  font-family: moonBold;
+  text-align: center;
+}
+
+#bodyText{
+  font-size: 15px;
+  font-family: openSansLight;
+
+}
+
+#imageSize {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.formPage {
+  border-width: 10px;
+  border: 10px black;
+}
+
+.formHP {
+  border-width: 10px;
+  border: 10px black;
+  font-family: openSansLight;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
