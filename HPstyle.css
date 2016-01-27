@@ -52,13 +52,21 @@
 
 .formPage {
   border-width: 10px;
-  border: 10px black;
+  border-color: black;
+  border-style: solid;
+  padding: 10px;
+  background: white;
+  text-align: center;
 }
 
 .formHP {
-  border-width: 10px;
-  border: 10px black;
   font-family: openSansLight;
+  font-size: 20px;
+}
+
+#checkbox {
+  text-align: left;
+  margin-left: 60px;
 }
 
 
