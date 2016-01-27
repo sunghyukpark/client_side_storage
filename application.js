@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 });
 
-var db, input;
+var db, input, ul;
 
 function databaseTodosGet(callback){
   var transaction = db.transaction(['todo'],'readwrite');
