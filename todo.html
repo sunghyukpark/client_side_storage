@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your housing Checklist</title>
+  <link rel="stylesheet" href="css/todo.css">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+  <script src="js/todo.js"></script>
+</head>
+<body>
+  <h1 align="center" style="margin:10px auto">Your housing Checklist</h1>
+  <main>
+    <section id="task-form">
+      <input id="create-task" type="text" name="task-insert" placeholder="Insert your list items here">
+      <button id="create-task">Create List</button>
+    </section>
+
+    <section id="task-container">
+      <ul id="task-list">
+        <h3 class="nothing-message">No Custom list yet</h3>
+        <h3 class="task-headline">Today's Tasks</h3>
+      </ul>
+      <div id="controls">
+        <p>**Single Click to mark complete</p>
+        <p>**Double Click to remove from list</p>
+        <br />
+        <button id="clear-all-tasks">Clear All Tasks</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

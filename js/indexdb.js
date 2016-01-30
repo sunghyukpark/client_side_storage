@@ -46,8 +46,8 @@ $(document).ready(function(){
     var cursorRequest = store.openCursor(keyRange);
     var data = [];
 
-    cursorRequest.onsuccess = function(e){
-      var result = e.target.result;
+    cursorRequest.onsuccess = function(event){
+      var result = event.target.result;
       if(result){
         data.push(result.value);
         result.continue();
