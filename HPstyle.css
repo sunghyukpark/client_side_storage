@@ -51,11 +51,11 @@
 }
 
 .formPage {
-  border-width: 10px;
-  border-color: black;
-  border-style: solid;
+  /* border-width: 10px; */
+  /* border-color: black; */
+  /* border-style: solid; */
   padding: 10px;
-  background: white;
+  background: orange;
   text-align: center;
 }
 
