@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 		// create the new li from the form input
 		var task = $('input[name=task-insert]').val();
-
+    console.log(task)
 		// add task to IndexDB
 		databaseTasksAdd(text, function(){
 			console.log('Task succefully added');

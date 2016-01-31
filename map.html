@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:50%; }
+        #n-description {float: right; width:50%; height: 50%;}
+        #fit {
+            float: left;
+            display: block;
+            position: relative;
+            margin: 0px auto;
+            width: 10%;
+            height: 40px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+            background: #ee8a65;
+        }
+    </style>
+</head>
+<body>
+
+    <div id='map'></div>
+    <br/>
+    <button id='fit'>Larger view</button>
+    <br/>
+    <nav id='filter-group' class='filter-group'></nav>
+    <div id='n-description'>
+        <h1>Welcome to NY!!</h1>
+        <h3>your neighborhood guide is here</h3>
+    </div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibmV3Y2l0eWhhY2tlcnMiLCJhIjoiY2lrMW90bzYxMDNheXVnbTBxbDdvc2RzaSJ9.Re9IddeG-RBYEHplUHfBew'
+;
+
+// add hardcoded markers
+var markers = {
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "theatre"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.038659, 38.931567]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "theatre"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.003168, 38.894651]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "bar"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.090372, 38.881189]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "bicycle"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.052477, 38.943951]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.031706, 38.914581]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.020945, 38.878241]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "marker-symbol": "music"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.007481, 38.876516]
+        }
+    }]
+};
+
+// Bounded Area to prevent user from scrolling out of NY area
+// var southEast = L.latLng(40.477399, -73.700009),
+//     northWest = L.latLng(40.917577, -74.25909),
+//     bounds = L.latLngBounds(southWest, northEast);
+
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v8', //stylesheet
+    center: [-73.98, 40.73], // starting position
+    zoom: 13 // starting zoom
+});
+
+// add user's work
+
+
+
+// add Little Italy circle
+
+$('button#fit').click(fit)
+
+function fit(){
+    map.fitBounds([[
+        -73.700009,
+        40.477399
+    ], [
+        -74.25909,
+        40.917577
+    ]]);
+}
+
+
+</script>
+
+</body>
+</html>
